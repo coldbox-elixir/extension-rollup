@@ -1,8 +1,13 @@
 {
-  "name": "coldbox-elixir-rollup-official",
-  "version": "1.0.5",
-  "description": "ColdBox Elixir Rollup integration.",
+  "name": "coldbox-elixir-rollup",
+  "version": "1.0.0",
+  "description": "ColdBox Elixir Rollup Extension.",
   "main": "dist/index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/coldbox-elixir/extension-webpack"
+  },
+  "homepage": "https://github.com/coldbox-elixir/extension-webpack",
   "scripts": {
     "compile": "babel --presets=es2015 -d dist src",
     "prepublish": "npm run compile"
