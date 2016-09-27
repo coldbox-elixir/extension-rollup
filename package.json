@@ -1,18 +1,24 @@
 {
-  "name": "laravel-elixir-rollup-official",
+  "name": "coldbox-elixir-rollup-official",
   "version": "1.0.5",
-  "description": "Laravel Elixir Rollup integration.",
+  "description": "ColdBox Elixir Rollup integration.",
   "main": "dist/index.js",
   "scripts": {
     "compile": "babel --presets=es2015 -d dist src",
     "prepublish": "npm run compile"
   },
   "keywords": [
-    "laravel",
+    "coldbox",
     "elixir",
     "rollup"
   ],
   "author": "Jeffrey Way",
+  "contributors": [
+    {
+      "name": "Eric Peterson",
+      "email": "eric@elpete.com"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "buble": "^0.12.3",

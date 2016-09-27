@@ -1,7 +1,7 @@
 import fs from 'fs';
 import gulp from 'gulp';
 import {extend} from 'underscore';
-import Elixir from 'laravel-elixir';
+import Elixir from 'coldbox-elixir';
 
 let buffer;
 let rollup;
@@ -102,7 +102,7 @@ class RollupTask extends Elixir.Task {
             entry: this.src.path,
             sourceMap: true,
             format: 'iife',
-            moduleName: 'LaravelElixirBundle',
+            moduleName: 'ColdBoxElixirBundle',
             plugins: plugins
         }, this.rollupConfig, this.options))
     }
