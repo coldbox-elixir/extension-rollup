@@ -21,7 +21,7 @@ class RollupTask extends Elixir.Task {
      * @param  {GulpPaths}   paths
      * @param  {object|null} options
      */
-    constructor(name, paths, options) {
+    constructor(name, paths, options = {}) {
         super(name, null, paths);
 
         this.options = options;
@@ -95,8 +95,8 @@ class RollupTask extends Elixir.Task {
             multiEntry()
         ];
 
-        plugins = plugins.concat(this.options.plugins || [])
-        delete this.options.plugins
+        plugins = plugins.concat(this.options.plugins || []);
+        delete this.options.plugins;
 
         return rollup(extend({
             entry: this.src.path,
@@ -104,7 +104,7 @@ class RollupTask extends Elixir.Task {
             format: 'iife',
             moduleName: 'ColdBoxElixirBundle',
             plugins: plugins
-        }, this.rollupConfig, this.options))
+        }, this.rollupConfig, this.options));
     }
 }
 
