@@ -1,13 +1,13 @@
-# Laravel Elixir Rollup Integration
+# ColdBox Elixir Rollup Integration
 
-This extension brings [Rollup.js](http://rollupjs.org/) support to your Laravel Elixir builds. 
+This extension brings [Rollup.js](http://rollupjs.org/) support to your ColdBox Elixir builds. 
 
 ## Install
 
-First, ensure that you're using Laravel Elixir v6 or newer. Next, install the extension like so:
+First, ensure that you're using ColdBox Elixir v6 or newer. Next, install the extension like so:
 
 ```bash
-npm install laravel-elixir-rollup-official --save-dev
+npm install coldbox-elixir-rollup --save-dev
 ```
 
 ## Use
@@ -15,26 +15,26 @@ npm install laravel-elixir-rollup-official --save-dev
 You're all set! Open your `gulpfile.js`, and add:
 
 ```js
-elixir(function(mix) {
-  mix.rollup('main.js');
-});
+elixir( function( mix ) {
+  mix.rollup( "main.js" );
+} );
 ```
 
-This will, by default, compile `resources/assets/js/main.js` to `public/js/main.js`. Should you require a non-standard base directory for your 
-source files, begin the path with `./`. This instructs Laravel Elixir to omit any default base directories.
+This will, by default, compile `resources/assets/js/main.js` to `includes/js/main.js`. Should you require a non-standard base directory for your 
+source files, begin the path with `./`. This instructs ColdBox Elixir to omit any default base directories.
 
 ```js
-elixir(function(mix) {
-  mix.rollup('./app/assets/js/main.js');
-});
+elixir( function( mix ) {
+  mix.rollup( "./app/assets/js/main.js" );
+} );
 ```
 
 Similarly, if you require a different output directory, provide a file or directory path as the second argument to `mix.rollup`.
 
 ```js
-elixir(function(mix) {
-  mix.rollup('main.js', 'public/build/bundle.js');
-});
+elixir( function( mix ) {
+  mix.rollup( "main.js", "public/build/bundle.js" );
+} );
 ```
 
 Now, you're specifying that you want to compile `resources/assets/js/main.js` to `public/build/bundle.js`.
@@ -43,9 +43,9 @@ If providing an array of source files, it might be useful to override the defaul
 
 
 ```js
-elixir(function(mix) {
-  mix.rollup(['main.js', 'other.js'], null, 'app/js');
-});
+elixir( function( mix ) {
+  mix.rollup( [ "main.js", "other.js" ], null, "app/js" );
+} );
 ```
 
 With this adjustment, we'll compile `app/js/main.js` and `app/js/other.js`.
